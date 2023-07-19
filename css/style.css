@@ -9,7 +9,6 @@ body{
     display: grid;
     font-family: Verdana;
     height: 100vh;
-    width: 100%;
     grid-template-columns: 100%;
     grid-template-areas: 'cabeçalho'
                          'principal'
@@ -86,7 +85,7 @@ button[type=submit]:focus{
     gap:30px;
     font-family: arial;
     margin-left: 100px;
-    gap:50px
+    gap:50px;
 }
 .text h1{
     font-size:40px;
@@ -94,35 +93,32 @@ button[type=submit]:focus{
 }
 .text p{
     font-size: 20px;;
-    display: flex;
+    display:inline-block
 }
 .png{
     display:flex;
     justify-content:center;
-    width: 100%;
 }
 
 /*MAIN*/
 main{
     grid-area: principal;
-    background-color:#fff;
-    align-items: center;
     font-family: arial;
-}   
-.main{
-    color:black;
-    text-align:center;
     display:flex;
     flex-direction:column;
+    width:100%;
+}   
+.main{
+    text-align:center;
+    display:grid;
+    flex-direction:row;
     align-items: center;
-    width: 100%;
+    justify-content: center;
 }
 .main p{
     padding: 20px 0 10px;
     font-size: 16px;
-    width:45%;
-    display: grid;
-    justify-content:center;
+    width: 100vh;
 }
 .main h3{
     padding:100px 0 10px;
@@ -130,19 +126,21 @@ main{
     color: #ff6b81;
 }
 .principal{
-    display: grid;
-    flex-direction:row;
+    display: flex;
+    flex-direction:column;
     justify-content: center;
 }
 .textarea1{
     padding-top:30px;
     gap:20px;
     display: flex;
+    justify-content: center;
 }
 .textarea2{
     padding-top:30px;
     gap: 20px;
     display:flex;
+    justify-content: center;
 }
 .bloco1{
     border: 1px solid white;
@@ -257,7 +255,6 @@ footer{
     grid-area: rodape;
     background-color:#ff6b81;
     color:#fff;
-    width: 100%;
     height: 100%;
     margin-top: 70px;
     font-family: arial;
@@ -297,34 +294,32 @@ footer{
     }
     .logo button{
         font-size:20px;
-        max-width: 100%;
         margin-right: 10vh;
     }
     .logo img{
-       margin-left:15%;
+       margin-left:20vh;
     } 
     .png{
-        margin: 0 auto;
+        margin:0 auto;
         margin-top: 20px;
     }
     .text h1{
         font-size: 40px;
         margin-top: 100px;
+        justify-content: center;
     }
     .text{
-        margin: 0;
-        max-width: 100%;
+        display: grid;
+        justify-content: center;
+        margin:0;
     }
     .text p{
         width: 85vh;
         text-align: center;
-        margin: 0 auto;
     }
     .cabeçalho2{
         flex-direction: column;
-    }
-    .text h1{
-        justify-content: center;
+        margin: 0 auto;
     }
     .btn1{
         justify-content: center;
@@ -332,23 +327,23 @@ footer{
     /*MAIN RESPONSIVO*/
     .principal{
         display:flex;
-        flex-direction: row;
+        flex-direction:row;
         align-items: center;
+        justify-content:center;
+        width:100%;
     }
     .textarea1, .textarea2{
         display:flex;
         flex-direction: column;
     }
     main{
-        width: 100%;
         font-size: larger;
-        display: grid;
+        display:flex;
         justify-content: center;
         align-items: center;
+        width:0 auto;
     }
-    .principal{
-        justify-content: center;
-    }
+
     .bloco1, .bloco2, .bloco3{
         text-align: start;
         margin:0 10px;
@@ -372,6 +367,7 @@ footer{
 /*FOOTER RESPONSIVO*/
     .titulo{
         font-size: larger;
+        max-width:100vh;
     }
     .rodape{
         font-size: larger;
@@ -401,7 +397,7 @@ footer{
     .text{
         margin:0;
         padding:40px;
-        width: 100%;
+        width: 100vh;
         font-size: 20px;
     }
     .text h1{
@@ -409,18 +405,16 @@ footer{
         text-align: center;
     }
     .text p{
-        width: 70vh;
         text-align: center;
     }
     .png{
         margin-bottom: 50px;
-        width: 100%;
-        height: auto;
+        width: 0 ;
     }
     .main{
         margin: 0 auto;
         padding:0 auto;
-        width: 60%;
+        width: 70vh;
     }
     .main h3{
         padding-top:30px;
@@ -434,7 +428,7 @@ footer{
     }
     .textarea1{
         display:grid;
-        flex-direction: row;
+        justify-content: center;
         justify-items: center;
     }
     .textarea2{
@@ -443,11 +437,11 @@ footer{
         justify-items: center;
     }
     .bloco1, .bloco2, .bloco3{
-        max-width: 70%;
-        height: 90%;
+        max-width: 70vh;
+        height:90%;
     }
     .bloco4, .bloco5, .bloco6{
-        max-width: 70%;
+        max-width: 70vh;
         height: 90%;
     }
     .titulo{
