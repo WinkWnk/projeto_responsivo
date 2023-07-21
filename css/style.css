@@ -14,7 +14,7 @@ body{
                          'principal'
                          'rodape';
 
-    overflow-x:hidden;
+
 }
 /*HEADER*/
 header{
@@ -31,7 +31,7 @@ header{
 
 .logo div{margin-right: 10%;
 display: flex;
-width: 20%;
+
 align-items: center;}
 
 .logo img{
@@ -59,7 +59,6 @@ button[type=submit]:focus{
 }
 .btn1{
     display: flex;
-    width: 70%;
     column-gap: 11%;
 }
 .btn:active{
@@ -87,13 +86,15 @@ button[type=submit]:focus{
     flex-direction:column;
     font-family: arial;
     margin-left: 5%;
+    
 }
 .text1 h1{margin-bottom: 3%;
-    font-size:280%;
-    display: flex;
+    font-size:50px;
+    width:100%;
+    
 }
 .text1 p{
-    font-size: 120%;
+    font-size: 16px;
     display:inline-block
 }
 .png{width:70%;
@@ -113,10 +114,7 @@ main{
 }   
 .main{
     text-align:center;
-    display:grid;
-    flex-direction:row;
-    align-items: center;
-    justify-content: center;
+    width:100%;
 }
 .main p{
     padding: 20px 0 10px;
@@ -145,10 +143,9 @@ main{
     display:flex;
     justify-content: center;
 }
-.bloco1{
+.bloco1, .bloco2, .bloco3, .bloco4, .bloco5, .bloco6{
     border: 1px solid white;
     font-size: 16px;
-    width: 60vh;
     height: 160px;
     align-items: center;
     border-radius: 5px;
@@ -157,97 +154,38 @@ main{
     padding: 20px;
     display: grid;
     gap:10px;
+    width:80%
 }
 .bloco1 h3{
     color: black;
     font-size: 16px;
     padding: 5px;
 }
-.bloco2{
-    border: 1px solid white;
-    font-size: 15px;
-    width: 60vh;
-    height: 160px;
-    align-items: center;
-    border-radius: 5px;
-    background-color: #ff6b81;
-    color: #fff;
-    padding: 20px;
-    display:grid;
-    gap:15px;
-}
+
 .bloco2 h3{
     color: black;
     font-size: 16px;
     padding: 5px;
 }
-.bloco3{
-    border: 1px solid white;
-    font-size: 16px;
-    width: 60vh;
-    height: 175px;
-    align-items: center;
-    border-radius: 5px;
-    background-color: #ff6b81;
-    color: #fff;
-    padding: 20px;
-    display: grid;
-    gap:10px;
-}
+
 .bloco3 h3{
     color: black;
     font-size: 16px;
     padding: 5px;
 }
-.bloco4{
-    border: 1px solid white;
-    font-size: 16px;
-    width: 60vh;
-    height: 180px;
-    align-items: center;
-    border-radius: 5px;
-    background-color: #ff6b81;
-    color: #fff;
-    padding: 15px;
-    display: grid;
-    gap:15px;
-}
+
 .bloco4 h3{
     color: black;
     font-size: 16px;
     padding: 5px;
 }
-.bloco5{
-    border: 1px solid white;
-    font-size: 16px;
-    width: 60vh;
-    height: 180px;
-    align-items: center;
-    border-radius: 5px;
-    background-color: #ff6b81;
-    color: #fff;
-    padding: 20px;
-    display: grid;
-    gap:10px;
-}
+
 .bloco5 h3{
     color: black;
     font-size: 16px;
     padding: 5px;
 }
-.bloco6{
-    border: 1px solid white;
-    font-size: 16px;
-    width: 60vh;
-    height: 180px;
-    align-items: center;
-    border-radius: 5px;
-    background-color: #ff6b81;
-    color: #fff;
-    padding: 20px;
-    display: grid;
-    gap:15px;
-}
+
 .bloco6 h3{
     color: black;
     font-size: 16px;
@@ -261,10 +199,8 @@ footer{
     height: 100%;
     margin-top: 70px;
     font-family: arial;
-    display:grid;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
+    width:100%
+
 }
 .titulo{
     display: flex;
@@ -273,6 +209,7 @@ footer{
     padding-bottom: 50px;
     font-size:20px;
 }
+.titulo h2{margin-top: 30px;}
 .rodape{
     display:flex;
     justify-content: space-around;
@@ -286,22 +223,15 @@ footer{
 /*Tablet*/
 @media screen and (max-width:1200px){
 /*HEADER RESPONSIVO*/
-    body{
-        grid-template-columns: 100%;
-        grid-template-areas: 'cabeçalho'
-                             'principal'
-                             'rodape';
-    }
+    
+
     .logo h1{
         font-size: 30px;
     }
     .logo button{
         font-size:20px;
-        margin-right: 10vh;
     }
-    .logo img{
-       margin-left:20vh;
-    } 
+
     .png{
         margin:0 auto;
         margin-top: 20px;
@@ -312,12 +242,11 @@ footer{
         justify-content: center;
     }
     .text{
-        display: grid;
-        justify-content: center;
-        margin:0;
+        width:100%;
+        text-align: center;
     }
     .text p{
-        width: 85vh;
+        width: 85%;
         text-align: center;
     }
     .cabeçalho2{
@@ -347,30 +276,21 @@ footer{
         width:0 auto;
     }
 
-    .bloco1, .bloco2, .bloco3{
+    .bloco1, .bloco2, .bloco3, .bloco4, .bloco5, .bloco6{
         text-align: start;
         margin:0 10px;
-        max-width:30vh;
+        width:40vw;
         margin-top: 15px;
-        height: auto;
+        height: 20vh;
     }
-    .bloco4, .bloco5, .bloco6{
-        text-align: start;
-        margin:0 10px;
-        max-width:30vh;
-        margin-top: 15px;
-        height: auto;
-    }
-    .bloco3{
-        min-height:15vh;
-    }
+
     .main p{    
-        width:70vh;
+        width:100%;
     }
 /*FOOTER RESPONSIVO*/
     .titulo{
         font-size: larger;
-        max-width:100vh;
+        max-width:100%;
     }
     .rodape{
         font-size: larger;
@@ -378,12 +298,6 @@ footer{
 }
 /*Smartphone*/
 @media screen and (max-width: 760px){
-    body{
-        grid-template-columns: 100%;
-        grid-template-areas: 'cabeçalho'
-                             'principal'
-                             'rodape';
-    }
     .logo{
         padding:30px 10px 0;
     }
@@ -400,7 +314,7 @@ footer{
     .text{
         margin:0;
         padding:40px;
-        width: 100vh;
+        width: 100%;
         font-size: 20px;
     }
     .text h1{
@@ -415,9 +329,8 @@ footer{
         width: 0 ;
     }
     .main{
-        margin: 0 auto;
-        padding:0 auto;
-        width: 70vh;
+        text-align:center;
+        width:100%;
     }
     .main h3{
         padding-top:30px;
@@ -429,27 +342,19 @@ footer{
     .principal{
         display:grid;
     }
-    .textarea1{
+    .textarea1, .textarea2{
         display:grid;
         justify-content: center;
         justify-items: center;
     }
-    .textarea2{
-        display:grid;
-        justify-content: center;
-        justify-items: center;
-    }
-    .bloco1, .bloco2, .bloco3{
-        max-width: 70vh;
+
+    .bloco1, .bloco2, .bloco3, .bloco4, .bloco5, .bloco6{
+        width: 80%;
         height:90%;
     }
-    .bloco4, .bloco5, .bloco6{
-        max-width: 70vh;
-        height: 90%;
-    }
+
     .titulo{
         margin:0 auto;
-        width:70vh;
         text-align: center;
         padding-top:50px;
         font-size: 20px;
